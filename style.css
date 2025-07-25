@@ -116,10 +116,6 @@ body {
     background-size: cover;
 }
 
-.front {
-    background-image: url(./img/cover.jpg);
-}
-
 .right {
     background-image: url(./img/book-side-v.jpg);
 }

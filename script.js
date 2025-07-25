@@ -1,6 +1,9 @@
 class Book3D {
-    constructor() {
-        this.book = document.getElementById('book');
+    constructor(containerId, id, spineTitle, cover, backText) {
+
+        // Génération de l'html
+        this.html(containerId, id, spineTitle, cover, backText);
+        this.book = document.getElementById(id);
         this.isDragging = false;
         this.startX = 0;
         this.startY = 0;
@@ -8,7 +11,7 @@ class Book3D {
         this.currentRotationY = 0;
         this.sensitivity = 0.5;
 
-        this.init();
+         this.init();
     }
 
     init() {
@@ -35,6 +38,25 @@ class Book3D {
 
         // Empêcher le menu contextuel
         this.book.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
+
+    html(containerId, id, title, cover, backText) {
+        const container = document.getElementById(containerId);
+        if (!container) {
+            console.error('Aucune div trouvée avec cet id.');
+            return;
+        }
+        container.innerHTML = `
+        <div class="book" id="${id}">
+            <div class="face front" style="background-image: url('${cover}')"></div>
+            <div class="face back">${backText}</div>
+            <div class="face spine">
+                <div class="spine-text">${title}</div>
+            </div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face right"></div>
+        </div>`;
     }
 
     onMouseDown(e) {
@@ -127,7 +149,7 @@ class Book3D {
 
 // Initialiser le livre 3D au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
-    const book3D = new Book3D();
+    const book3D = new Book3D("newBook", "book", "Mon bouquin", "./img/cover.jpg", "Rézumé");
 
     // Ajouter des contrôles optionnels
     document.addEventListener('keydown', (e) => {
@@ -177,4 +199,4 @@ function createParticles() {
 }
 
 // Appeler la fonction de particules (optionnel)
-// createParticles();
+createParticles();
