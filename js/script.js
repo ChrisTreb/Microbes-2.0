@@ -149,7 +149,13 @@ class Book3D {
 
 // Initialiser le livre 3D au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
-    const book3D = new Book3D("newBook", "book", "Mon bouquin", "./img/cover.jpg", "Rézumé");
+    const book3D = new Book3D(
+        "newBook", 
+        "book", 
+        "Les grands Crocodiliens", 
+        "./img/cover.jpg", 
+        "Une invasion sanglante menace l'Humanité…"
+    );
 
     // Ajouter des contrôles optionnels
     document.addEventListener('keydown', (e) => {

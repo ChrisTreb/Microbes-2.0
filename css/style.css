@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Lexend:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Lexend", sans-serif;
+    color: #c25eea;
+}
+
+p {
+    font-family: "Lexend", sans-serif;
+    line-height: 25px;
+}
+
+body {
+    background-color: #100D08;
+    overflow-x: hidden;
+    width: 100vw;
+    padding: 0 15%;
+}
+
+nav {
+    width: 100vw;
+    height: 80px;
+    margin: 25px 0;
+}
+
+#menu {
+    font-size: 45px;
+    transition: 0.5s;
+}
+
+#header {
+    width: 65%;
+    min-height: 100vh;
+}
+
+.title {
+    margin-bottom: 50px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}

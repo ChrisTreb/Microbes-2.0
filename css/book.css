@@ -1,21 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.container {
+.book-container {
+    position: fixed;
+    top: 25%;
+    right: 15%;
     perspective: 1200px;
     perspective-origin: center center;
 }
@@ -62,8 +48,9 @@ body {
 .back {
     width: 300px;
     height: 400px;
-    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    background: linear-gradient(145deg, #530267, #b446dc);
     transform: rotateY(180deg) translateZ(20px);
+    padding: 50px;
 }
 
 /* Tranche du livre (côté gauche) */
@@ -117,27 +104,11 @@ body {
 }
 
 .right {
-    background-image: url(./img/book-side-v.jpg);
+    background-image: url(../img/book-side-v.jpg);
 }
 
 .top, .bottom {
-    background-image: url(./img/book-side-h.jpg);
-}
-
-/* Instructions */
-.instructions {
-    position: absolute;
-    bottom: 50px;
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.7; }
-    50% { opacity: 1; }
+    background-image: url(../img/book-side-h.jpg);
 }
 
 /* Effet de survol */
