@@ -149,6 +149,7 @@ class Book3D {
 
 // Initialiser le livre 3D au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
+    /*
     const book3D = new Book3D(
         "newBook", 
         "book", 
@@ -158,6 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "<p>Une invasion sanglante menace l'Humanité…<p>" +
         "Tangi Talarmin"
     );
+    */
 
     // Ajouter des contrôles optionnels
     document.addEventListener('keydown', (e) => {

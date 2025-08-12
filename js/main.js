@@ -6,6 +6,7 @@ let stopAnimationFlag = false;   // Permet de détecter si on doit stopper
 let timeoutId = null;            // Stockera l'ID du setTimeout
 
 stopButton.addEventListener("click", () => {
+    console.log("Stop !");
     stopAnimation();
     stopButton.style.display = "none";
     startButton.style.display = "block";
