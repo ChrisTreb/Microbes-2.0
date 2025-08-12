@@ -1,7 +1,31 @@
 const containers = document.getElementsByClassName('container');
+const stopButton = document.getElementById("stop");
+const startButton = document.getElementById("start");
 
 let stopAnimationFlag = false;   // Permet de détecter si on doit stopper
 let timeoutId = null;            // Stockera l'ID du setTimeout
+
+stopButton.addEventListener("click", () => {
+    stopAnimation();
+    stopButton.style.display = "none";
+    startButton.style.display = "block";
+});
+
+startButton.addEventListener("click", () => {
+    stopAnimation();
+    stopAnimationFlag = false;
+    activateContainers(containers, 5000);
+    startButton.style.display = "none";
+    stopButton.style.display = "block";
+});
+
+function activateOneContainer() {
+    for (let el of containers) {
+        el.addEventListener("click", () => {
+            el.classList.add('container-active');
+        });
+    }
+}
 
 function activateContainers(elements, delay) {
   let index = 0;
@@ -38,6 +62,9 @@ function stopAnimation() {
 // Pour démarrer
 activateContainers(containers, 5000);
 
-// Pour stopper manuellement depuis ton code
+// Pour stopper manuellement
 // stopAnimation();
+
+// Permet le focus sur un élément au click
+activateOneContainer();
 

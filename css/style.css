@@ -26,6 +26,7 @@ body {
     background-color: #100D08;
     overflow-x: hidden;
     width: 100vw;
+    min-height: 100vh;
     padding: 0 15%;
 }
 
@@ -36,22 +37,26 @@ nav {
 }
 
 #menu {
-    font-size: 45px;
+    font-size: 35px;
     transition: 0.5s;
+}
+
+#menu > i:hover {
+    transform: scale(0.95);
+    cursor: pointer;
 }
 
 #header {
     width: 100%;
-    min-height: 75vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 #content {
     position: absolute;
     width: 70%;
-    height: 60vh;
+    height: 75vh;
     clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
     overflow: hidden;
 }
@@ -142,7 +147,26 @@ h3 {
     clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
 }
 
+.control {
+    font-size: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.control:hover {
+    transform: scale(0.95);
+}
+
+#start {
+    display: none;
+}
+
 footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     text-align: center;
 }
