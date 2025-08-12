@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Livre 3D Interactif</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -30,59 +25,67 @@
     <div class="book-container" id="newBook"></div>
 
     <div id="header">
-      <div class="title">
-        <h1>Les grands Crocodiliens</h1>
-        <p>Recueil de nouvelles - 160 pages - Version électronique : 4 €</p>
-      </div>
-      <div class="content">
-        <h3>1 - Docteur Vampire</h3>
-        <p>
-          Il est sans foie ni loi, et depuis de nombreux siècle il doit,
-          pourchassé par les autorités, prendre la fuite après chaque repas,
-          quand n'importe quel homme qu'on laisse digérer tranquillement se
-          contente d'un rot et d'un cigare au coin du feu…
-        </p>
-        <p>
-          Et il obtint son doctorat, mettant un terme à cette vie de cavale.
-        </p>
-        <p>Du moins l'espérait-il...</p>
-        <h3>2 - Les grands crocodiliens</h3>
-        <p>Une invasion sanglante menace l'Humanité…</p>
-        <h3>3 - Fantasma</h3>
-        <p>
-          Remportez un voyage astral interspatial avec Holochannel N°5 !
-          Fantasma ! Le plus fameux des jeux télé, refuge du soir pour les
-          désœuvrés mentaux, institution générant des millions de cruz de
-          bénéfice, fait chaque jour miroiter mille fantasmes dorés à une classe
-          moyenne passionnée par les plaisirs imposés... Fusées, clones,
-          planètes exotiques et décharges sidérales sont au programme de
-          Fantasma, la nouvelle sponsorisée par Holochannel N°5 !
-        </p>
-        <h3>4 - Gestion de générations</h3>
-        <p>
-          Dans un futur proche, que seront devenus les hommes, et les crustacés
-          ? Après tout, on s'en fiche. Mais que sera devenu votre prêt ? Et
-          votre fils ?
-        </p>
+      <div id="content">
+        <div class="container first">
+          <img
+            id="logo"
+            src="./img/logo/LOGOMICROBE_solo.png"
+            alt="logo"
+            title="logo"
+          />
+          <h1>Les éditions du Microbe</h1>
+          <h2>Elles sont de retour !</h2>
+        </div>
+        <div class="container second">
+          <div class="container-content">
+            <h3>Les piétons lunaires</h3>
+            <p>
+              Étiez-vous devant votre téléviseur en cette matinée du 21 juillet
+              1969, pour voir un homme descendre la plus fabuleuse des échelles
+              ? Mais Neil Armstrong et Buzz Aldrin ont-ils réellement marché sur
+              la Lune, comme toutes les télévisions du monde l'ont montré ? Vous
+              n'en doutez pas ? Et bien eux, après de nombreuses années passées
+              sur Terre, n'en sont plus si sûrs !
+            </p>
+          </div>
+        </div>
+        <div class="container third">
+          <div class="container-content">
+            <h3>La mitamorphose</h3>
+            <p>
+              Si vous circulez le soir venu dans les rues du Multiplexe,
+              regardez bien autour de vous si l'homme-mite n'est pas là, quelque
+              part, aux aguets mais discret. Il est pourtant là, il veille à la
+              quiétude de ses concitoyens. N'ayez plus peur de rentrer seul du
+              restaurant ou du cinéma, ne craignez plus de faire une mauvaise
+              rencontre. Mothman, l'homme-mite, n'est jamais loin, et un seul
+              cri d'effroi le mettra en alerte, il sera auprès de vous avant que
+              vous ayez fini de crier…
+            </p>
+          </div>
+        </div>
+        <div class="container fourth">
+          <div class="container-content">
+            <h3>Docteur Vampire</h3>
+            <p>
+              Il est sans foie ni loi, et depuis de nombreux siècle il doit,
+              pourchassé par les autorités, prendre la fuite après chaque repas,
+              quand n'importe quel homme qu'on laisse digérer tranquillement se
+              contente d'un rot et d'un cigare au coin du feu… Et il obtint son
+              doctorat, mettant un terme à cette vie de cavale. Du moins
+              l'espérait-il...
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
     <footer>
-        <p>Éditions du microbe | 2009 / 2025</p>
-        <p>© Tous droits réservés</p>
+      <p>Éditions du microbe | 2009 / 2025</p>
+      <p>© Tous droits réservés</p>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/book-script.js"></script>
   </body>
 </html>

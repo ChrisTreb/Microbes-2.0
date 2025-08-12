@@ -153,8 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "newBook", 
         "book", 
         "Les grands Crocodiliens", 
-        "./img/cover.jpg", 
-        "Une invasion sanglante menace l'Humanité…"
+        "./img/book/cover.jpg", 
+        "<p>Les grands Crocodiliens<p>" +
+        "<p>Une invasion sanglante menace l'Humanité…<p>" +
+        "Tangi Talarmin"
     );
 
     // Ajouter des contrôles optionnels
