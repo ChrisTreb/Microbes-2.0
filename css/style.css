@@ -90,7 +90,7 @@ nav {
 
 .container-active {
     position: absolute;
-    transform: scale(1.1);
+    transform: scale(1.05);
     z-index: 10 !important;
     position: relative;
 }
