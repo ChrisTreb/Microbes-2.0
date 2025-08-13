@@ -1,31 +1,45 @@
 const containers = document.getElementsByClassName('container');
 const stopButton = document.getElementById("stop");
 const startButton = document.getElementById("start");
+const menuButton = document.getElementById("menu-button");
+const menuHidden = document.getElementById("hidden-menu");
 
 let stopAnimationFlag = false;   // Permet de détecter si on doit stopper
 let timeoutId = null;            // Stockera l'ID du setTimeout
 
+let menuState = false;
+
+menuButton.addEventListener("click", () => {
+  if(!menuState) {
+    menuHidden.classList.add("menu-active");
+    menuState = true;
+  } else {
+    menuHidden.classList.remove("menu-active");
+    menuState = false;
+  }
+});
+
 stopButton.addEventListener("click", () => {
-    console.log("Stop !");
-    stopAnimation();
-    stopButton.style.display = "none";
-    startButton.style.display = "block";
+  console.log("Stop !");
+  stopAnimation();
+  stopButton.style.display = "none";
+  startButton.style.display = "block";
 });
 
 startButton.addEventListener("click", () => {
-    stopAnimation();
-    stopAnimationFlag = false;
-    activateContainers(containers, 5000);
-    startButton.style.display = "none";
-    stopButton.style.display = "block";
+  stopAnimation();
+  stopAnimationFlag = false;
+  activateContainers(containers, 5000);
+  startButton.style.display = "none";
+  stopButton.style.display = "block";
 });
 
 function activateOneContainer() {
-    for (let el of containers) {
-        el.addEventListener("click", () => {
-            el.classList.add('container-active');
-        });
-    }
+  for (let el of containers) {
+    el.addEventListener("click", () => {
+      el.classList.add('container-active');
+    });
+  }
 }
 
 function activateContainers(elements, delay) {

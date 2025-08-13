@@ -22,6 +22,21 @@ p {
     font-size: 0.9em;
 }
 
+li {
+    font-family: "Lexend", sans-serif;
+    font-size: 1.2em;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+
+a {
+    text-decoration: none;
+}
+
+a > li:hover {
+    color: #FF0000;
+}
+
 body {
     background-color: #100D08;
     overflow-x: hidden;
@@ -40,18 +55,45 @@ body {
 
 nav {
     width: 100vw;
-    height: 80px;
-    margin: 15px 0;
+    height: 35px;
+    margin-bottom: 20px;
 }
 
 #menu {
+    margin-top: 20px;
     font-size: 35px;
     transition: 0.5s;
+    display: flex;
+    flex-direction: row;
 }
 
 #menu > i:hover {
     transform: scale(0.95);
     cursor: pointer;
+}
+
+#logo-menu {
+    display: block;
+    height: 35px;
+}
+
+.menu-item {
+    margin-right: 15px;
+}
+
+#hidden-menu {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-active {
+    opacity: 1 !important;
+}
+
+.link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
 }
 
 #header {
