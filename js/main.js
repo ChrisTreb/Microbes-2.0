@@ -10,6 +10,7 @@ let stopAnimationFlag = false;   // Permet de détecter si on doit stopper
 let timeoutId = null;            // Stockera l'ID du setTimeout
 
 let menuState = false;
+let rgpdState = true;
 
 menuButton.addEventListener("click", () => {
   if(!menuState) {
@@ -38,7 +39,15 @@ startButton.addEventListener("click", () => {
 
 btnCloseRgdpd.addEventListener("click", () => {
   rgpd.style.display = "none";
+  rgpdState = false;
+  localStorage.setItem("rgpd", "false");
 });
+
+function checkRgpdStatus() {
+  if(localStorage.getItem("rgpd") == "false") {
+    rgpd.style.display = "none";
+  } 
+}
 
 function activateOneContainer() {
   for (let el of containers) {
@@ -88,4 +97,6 @@ activateContainers(containers, 5000);
 
 // Permet le focus sur un élément au click
 activateOneContainer();
+
+checkRgpdStatus();
 
