@@ -3,6 +3,8 @@ const stopButton = document.getElementById("stop");
 const startButton = document.getElementById("start");
 const menuButton = document.getElementById("menu-button");
 const menuHidden = document.getElementById("hidden-menu");
+const rgpd = document.getElementById("rgpd");
+const btnCloseRgdpd = document.getElementById("close-rgpd");
 
 let stopAnimationFlag = false;   // Permet de détecter si on doit stopper
 let timeoutId = null;            // Stockera l'ID du setTimeout
@@ -32,6 +34,10 @@ startButton.addEventListener("click", () => {
   activateContainers(containers, 5000);
   startButton.style.display = "none";
   stopButton.style.display = "block";
+});
+
+btnCloseRgdpd.addEventListener("click", () => {
+  rgpd.style.display = "none";
 });
 
 function activateOneContainer() {

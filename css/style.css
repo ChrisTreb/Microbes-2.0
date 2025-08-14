@@ -221,7 +221,6 @@ h3 {
     border: none;
     cursor: pointer;
     transition: 0.5s;
-    margin-bottom: 50px;
 }
 
 .control:hover {
@@ -230,6 +229,23 @@ h3 {
 
 #start {
     display: none;
+}
+
+.popup {
+    z-index: 200;
+    background-color: #100d08ba;
+    border: 2px solid #2b2a28;
+    padding: 15px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    transition: 1s;
 }
 
 footer {
